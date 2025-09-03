@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NearConnect - App Introduction Video</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .video-container {
+            max-width: 1200px;
+            width: 100%;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            position: relative;
+        }
+
+        .video-header {
+            background: linear-gradient(135deg, #3182ce 0%, #38a169 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .app-logo {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            letter-spacing: -0.02em;
+        }
+
+        .app-tagline {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            font-weight: 300;
+        }
+
+        .video-wrapper {
+            position: relative;
+            width: 100%;
+            height: 0;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            background: #000;
+        }
+
+        .video-wrapper video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .video-controls {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .play-button {
+            background: #3182ce;
+            border: none;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .play-button:hover {
+            background: #2c5aa0;
+            transform: scale(1.1);
+        }
+
+        .video-info {
+            color: white;
+            flex: 1;
+            margin-left: 20px;
+        }
+
+        .video-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .video-duration {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        .video-content {
+            padding: 40px;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .feature-card {
+            text-align: center;
+            padding: 30px 20px;
+            border-radius: 15px;
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            transition: all 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #3182ce, #38a169);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 1.5rem;
+            color: white;
+        }
+
+        .feature-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: #2d3748;
+        }
+
+        .feature-description {
+            color: #718096;
+            line-height: 1.6;
+        }
+
+        .cta-section {
+            text-align: center;
+            margin-top: 50px;
+            padding: 40px;
+            background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+            border-radius: 15px;
+        }
+
+        .cta-title {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: #2d3748;
+        }
+
+        .cta-subtitle {
+            font-size: 1.1rem;
+            color: #718096;
+            margin-bottom: 30px;
+        }
+
+        .download-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .download-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 15px 30px;
+            background: #2d3748;
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .download-btn:hover {
+            background: #1a202c;
+            transform: translateY(-2px);
+        }
+
+        .download-btn.primary {
+            background: linear-gradient(135deg, #3182ce, #38a169);
+        }
+
+        .download-btn.primary:hover {
+            background: linear-gradient(135deg, #2c5aa0, #2f855a);
+        }
+
+        @media (max-width: 768px) {
+            .video-container {
+                margin: 10px;
+                border-radius: 15px;
+            }
+
+            .video-header {
+                padding: 20px;
+            }
+
+            .app-logo {
+                font-size: 2rem;
+            }
+
+            .app-tagline {
+                font-size: 1rem;
+            }
+
+            .video-content {
+                padding: 20px;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .download-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .download-btn {
+                width: 100%;
+                max-width: 300px;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="video-container">
+        <div class="video-header">
+            <div class="app-logo">NearConnect</div>
+            <div class="app-tagline">Connect with nearby people, create infinite possibilities</div>
+        </div>
+
+        <div class="video-wrapper">
+            <video id="introVideo" poster="video-poster.jpg" preload="metadata">
+                <source src="nearconnect-intro-video.mp4" type="video/mp4">
+                <source src="nearconnect-intro-video.webm" type="video/webm">
+                Your browser does not support the video tag.
+            </video>
+
+            <div class="video-controls">
+                <button class="play-button" id="playButton" onclick="togglePlay()">
+                    ▶
+                </button>
+                <div class="video-info">
+                    <div class="video-title">NearConnect App Introduction</div>
+                    <div class="video-duration">1:30</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="video-content">
+            <h2 style="text-align: center; font-size: 2rem; margin-bottom: 20px; color: #2d3748;">
+                Discover the Future of Location-Based Social Networking
+            </h2>
+            <p style="text-align: center; font-size: 1.1rem; color: #718096; line-height: 1.6; max-width: 600px; margin: 0 auto;">
+                NearConnect uses advanced AI and GPS technology to connect you with nearby people for any activity - from socializing and shopping to task collaboration and local events.
+            </p>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <div class="feature-title">Smart Matching</div>
+                    <div class="feature-description">AI-powered algorithm matches you with compatible people based on location, interests, and current activity.</div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">💬</div>
+                    <div class="feature-title">Instant Chat</div>
+                    <div class="feature-description">Real-time messaging with voice support and activity invitations to connect immediately.</div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🛍️</div>
+                    <div class="feature-title">Shopping Collaboration</div>
+                    <div class="feature-description">Find shopping partners, group buying opportunities, and local deals with nearby users.</div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🤝</div>
+                    <div class="feature-title">Task Collaboration</div>
+                    <div class="feature-description">Publish tasks, find skilled helpers, and earn rewards for completing collaborative projects.</div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🎉</div>
+                    <div class="feature-title">Activity Discovery</div>
+                    <div class="feature-description">Discover and join local events, create your own activities, and build community connections.</div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🔒</div>
+                    <div class="feature-title">Privacy Protected</div>
+                    <div class="feature-description">Control your location sharing, participate anonymously, and connect safely with verified users.</div>
+                </div>
+            </div>
+
+            <div class="cta-section">
+                <div class="cta-title">Ready to Connect?</div>
+                <div class="cta-subtitle">Download NearConnect and start building meaningful connections in your community today.</div>
+                <div class="download-buttons">
+                    <a href="#" class="download-btn primary">
+                        📱 Download for iOS
+                    </a>
+                    <a href="#" class="download-btn">
+                        🤖 Download for Android
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const video = document.getElementById('introVideo');
+        const playButton = document.getElementById('playButton');
+
+        function togglePlay() {
+            if (video.paused) {
+                video.play();
+                playButton.innerHTML = '⏸';
+            } else {
+                video.pause();
+                playButton.innerHTML = '▶';
+            }
+        }
+
+        // Update play button when video ends
+        video.addEventListener('ended', function() {
+            playButton.innerHTML = '▶';
+        });
+
+        // Hide controls when video is playing (optional)
+        video.addEventListener('play', function() {
+            setTimeout(() => {
+                document.querySelector('.video-controls').style.opacity = '0';
+            }, 2000);
+        });
+
+        video.addEventListener('pause', function() {
+            document.querySelector('.video-controls').style.opacity = '1';
+        });
+
+        // Show controls on hover
+        document.querySelector('.video-wrapper').addEventListener('mouseenter', function() {
+            document.querySelector('.video-controls').style.opacity = '1';
+        });
+
+        document.querySelector('.video-wrapper').addEventListener('mouseleave', function() {
+            if (!video.paused) {
+                setTimeout(() => {
+                    document.querySelector('.video-controls').style.opacity = '0';
+                }, 1000);
+            }
+        });
+    </script>
+</body>
+</html>
