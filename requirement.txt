@@ -1,0 +1,30 @@
+Build mobile apps that use verifiable data to create trust in new ways. Examples include:
+
+Proving online activity (e.g., social media views, downloads, or Uber rides)
+
+Verifying personal achievements (e.g., gaming stats, fitness goals, or concert visits)
+
+Enhancing trust in critical data (e.g., medical records, financial status)
+
+Validating AI-generated content or other internet sources
+
+We want unique, practical, and scalable ideas that redefine how we trust information online.
+
+Virality & Competitions
+Superfan Leaderboard: Build an app that integrates with Spotify to verify and rank users as top listeners for artists like Taylor Swift, gamifying fandom with badges and exclusive rewards.
+Rizzleaderboard: Create a dating app feature using Hinge data, where AI scores user messages for charm and wit, displaying rankings to spark friendly competition.
+Ultimate Traveler Status: Develop an app that aggregates airline loyalty data to verify and showcase elite traveler status across multiple carriers, unlocking exclusive perks.
+Fandom Verification App: Use Ticketmaster data to confirm users’ attendance at concerts or events, creating a superfan platform for exclusive brand offers and community status.
+Challenge Verification App: Build an app that verifies users have watched a specific movie or read a book (via streaming or e-reader data), offering rewards for completing cultural challenges.
+Status App: Build a dating app where people can flex their status (Soho House membership, Centurion Card, Marriott Titanium, 100k followers, mutuals with Mark Cuban, etc) and those status can be filtered when searching, offering users a way to differentiate themselves.
+Verification Gating
+Stock Ownership Access: Create an app that verifies ownership of specific stocks (e.g., Apple) via trusted data to unlock exclusive features or communities for investors.
+Subscriber-Only Promotions: Develop a platform where brands offer exclusive deals to users who verify active subscriptions (e.g., Netflix, Spotify) and platform data.
+Authentic Review Verification: Build a system that ensures only verified purchasers can leave product reviews, using purchase data from e-commerce platforms to enhance trust.
+Fandom-Targeted Marketing: Enable brands to target verified superfans (via event or purchase data) with exclusive offers, creating a gated community for loyal customers.
+Engagement Rewards App: Design a platform where companies offer time-limited rewards to users who verify they’ve signed up for a service, driving engagement with secure verification.
+Marketplaces
+Verified Trader Marketplace: Create a platform where traders prove ownership of claimed positions via brokerage APIs, enabling transparent trading discussions and deals.
+Points Mileage Exchange: Build a marketplace where users pay others to book flights using loyalty points, with funds held in escrow until the transaction is verified.
+PvP Gaming & Wagering: Develop a platform for head-to-head gaming bets, using trusted data to verify outcomes trustlessly and distribute winnings.
+Verified Collectibles Market: Create a marketplace for trading collectibles (e.g., rare sneakers, bags) where ownership is verified via purchase history, ensuring authenticity.
